@@ -12,22 +12,22 @@ No site generator, no build step, no package.json. The folder is served as it is
 ## Layout
 
 ```
-index.html             the front page: a card per product, then every write-up, newest first
-styles.css, 16.png     shared by the product pages
+index.html             the front page: a card per project
+styles.css, 16.png     shared by every page except the write-ups
 sitemap.xml, robots.txt
-<project>/index.html   a product's page, with privacy-policy.html, release-notes.html and so on beside it
-<project>/<topic>.html a write-up, e.g. mash/what-we-built.html
+<project>/index.html   the project's page: a card per page beside it
+<project>/<page>.html  privacy-policy.html, release-notes.html, a write-up such as mash/what-we-built.html…
 ```
 
 - One folder per project, pages named in lower-case-with-dashes. A write-up's date goes on the page, not in its name.
+- Every project gets a card on the front page, and every page in a project folder gets a card on that folder's
+  `index.html`.
 - Every new page gets an entry in `sitemap.xml`. When a page's content changes, its `lastmod` moves to that day.
-- Adding a write-up means adding its line to the Write-ups list in `index.html` (newest first, with its date and a
-  one-line summary).
 
-## Product pages
+## Pages that use styles.css
 
-They link `../styles.css` and `../16.png`, open with a Home link, and use the classes already in `styles.css`. Match
-the page next to them.
+Pages in a project folder link `../styles.css` and `../16.png`, open with a Home link, and use the classes already in
+`styles.css`: cards with a Learn More button on the index pages. Match the page next to them.
 
 ## Write-ups: every page is one self-contained file
 
@@ -41,7 +41,7 @@ the page next to them.
 - Written for someone opening the link cold: say what the thing is before how it works, explain jargon once, no
   internal shorthand without a word on what it means.
 - Facts only from the project itself (its repo, git history, data); nothing invented.
-- A breadcrumb at the top leads back: `<a href="../index.html">Pages</a> / <Project>`.
+- A breadcrumb at the top leads back: `<a href="../index.html">Pages</a> / <a href="index.html"><Project></a>`.
 
 ### The shared look
 
