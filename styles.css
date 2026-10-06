@@ -100,6 +100,20 @@ section {
   width: 100%;
   max-width: 300px;
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cards in a row stretch to the same height; this keeps their buttons level.
+   Margins don't collapse in a flex column, so the paragraph under the heading
+   drops its top margin to keep the gap it had. */
+.card .button {
+  margin-top: auto;
+  align-self: center;
+}
+
+.card h2 + p {
+  margin-top: 0;
 }
 
 .card h2 {
