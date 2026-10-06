@@ -15,17 +15,13 @@
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
-/* Body text is 20px, so a line across the 760px column is a comfortable length to read. */
-.container { font-size: 20px; }
-h1 { font-size: 34px; }
-h2 { font-size: 28px; margin: 60px 0 12px; }
-h3 { font-size: 22px; margin: 40px 0 8px; }
-table { font-size: 17px; }
-.meta { color: var(--muted); font-size: 16px; margin: 16px 0 24px; }
+h2 { margin: 60px 0 12px; }
+h3 { margin: 40px 0 8px; }
+.meta { color: var(--muted); font-size: 15px; margin: 16px 0 24px; }
 .goal { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 22px; margin: 0 0 24px; }
 .goal .label { display: block; font-size: 13px; font-weight: bold; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
-.goal p { font-size: 22px; line-height: 1.55; margin: 0; color: var(--text); }
-.goal p.note { font-size: 18px; color: var(--muted); margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+.goal p { font-size: 19px; line-height: 1.55; margin: 0; color: var(--text); }
+.goal p.note { font-size: 17px; color: var(--muted); margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
 .summary { margin: 0 0 24px; padding-left: 22px; }
 .summary li { margin: 8px 0; }
 p { margin: 0 0 16px; }
@@ -41,7 +37,7 @@ td:first-child { white-space: nowrap; font-weight: bold; }
 .d5 { background: var(--day5); color: var(--day5-ink); }
 .step { display: flex; align-items: baseline; gap: 12px; margin: 36px 0 12px; border-bottom: 2px solid var(--text); padding-bottom: 8px; }
 .step .n { display: inline-flex; width: 28px; height: 28px; border-radius: 14px; background: var(--text); color: #ffffff; font-size: 14px; font-weight: bold; align-items: center; justify-content: center; flex-shrink: 0; align-self: center; }
-.step h3 { margin: 0; font-size: 22px; font-weight: bold; }
+.step h3 { margin: 0; font-size: 21px; font-weight: bold; }
 .step .count { margin-left: auto; font-size: 14px; color: var(--muted); }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
 .tile { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
@@ -51,7 +47,7 @@ td:first-child { white-space: nowrap; font-weight: bold; }
 .tile span.p { display: block; font-size: 14.5px; line-height: 1.5; color: var(--muted); margin-top: 2px; }
 figure { margin: 24px 0; }
 figure img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 8px; background: #ffffff; }
-figcaption { font-size: 16px; line-height: 1.5; color: var(--muted); margin-top: 8px; }
+figcaption { font-size: 14.5px; line-height: 1.5; color: var(--muted); margin-top: 8px; }
 .pair { display: grid; gap: 14px; }
 .tag { display: inline-block; font-size: 12px; font-weight: bold; line-height: 20px; padding: 0 9px; border-radius: 10px; margin-right: 8px; background: var(--border); color: var(--text); }
 .tag.after { background: var(--text); color: #ffffff; }
@@ -80,10 +76,6 @@ figcaption { font-size: 16px; line-height: 1.5; color: var(--muted); margin-top:
 .credits a { font-weight: bold; }
 footer { margin-top: 72px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 14px; color: var(--muted); }
 @media (max-width: 640px) {
-  .container { font-size: 18px; }
-  h1 { font-size: 28px; }
-  h2 { font-size: 24px; }
-  .goal p { font-size: 19px; }
   .frames { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   td:first-child { white-space: normal; }
 }
