@@ -36,9 +36,12 @@ to them. There is no dark mode, on any page.
 - They use the site's look like every other page. Anything of their own (tiles, chips, diagrams) goes in a `<style>`
   block in the page, in the site's colours: `#333` headings and strong text, `#666` body text, `#ddd` borders, `#f4f4f4`
   for shaded areas. Don't name a class `.card`: `styles.css` already styles it for the index pages.
-- Everything fits the 760 px column inside the container. Diagrams are inline SVG drawn 760 wide
-  (`viewBox="0 0 760 …"`), so their text shows at full size on a laptop. Nothing scrolls sideways except a wide table
-  in its box.
+- The one difference from other pages: a write-up's white box is 1200 px wide, not 800. Text, tables and boxes keep a
+  760 px column down its middle; figures and grids of tiles use the full width (copy the layout rules at the end of
+  `mash/what-we-built.html`'s `<style>`). Nothing scrolls sideways except a wide table in its box.
+- A screenshot is never shown bigger than the app shows it: capture at 2x and give its `<figure>` a `max-width` of the
+  width it was captured at, in CSS pixels.
+- Diagrams are inline SVG drawn 760 wide (`viewBox="0 0 760 …"`) and kept at 760, so their text shows at full size.
 - Pictures are built in as `data:` URIs: JPEG, about 1600 px wide at most, quality around 85. Keep a page under a few MB.
 - Easy to scan: short sections, clear headings, a contents list at the top, tables where things compare.
 - Written for someone opening the link cold: say what the thing is before how it works, explain jargon once, no
