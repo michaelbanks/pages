@@ -15,19 +15,19 @@ No site generator, no build step, no package.json. The folder is served as it is
 index.html             the front page: a card per project
 styles.css, 16.png     shared by every page except the write-ups
 sitemap.xml, robots.txt
-<project>/index.html   the project's page: a card per page beside it
+<project>/index.html   the project's page: a card per product page, a list of write-ups
 <project>/<page>.html  privacy-policy.html, release-notes.html, a write-up such as mash/what-we-built.html…
 ```
 
 - One folder per project, pages named in lower-case-with-dashes. A write-up's date goes on the page, not in its name.
-- Every project gets a card on the front page, and every page in a project folder gets a card on that folder's
-  `index.html`.
+- Every project gets a card on the front page. On a project's `index.html`, each product page gets a card and each
+  write-up a line in the Write-ups list (newest first, with its date and a one-line summary).
 - Every new page gets an entry in `sitemap.xml`. When a page's content changes, its `lastmod` moves to that day.
 
 ## Pages that use styles.css
 
 Pages in a project folder link `../styles.css` and `../16.png`, open with a Home link, and use the classes already in
-`styles.css`: cards with a Learn More button on the index pages. Match the page next to them.
+`styles.css`: cards with a Learn More button, and `.write-ups` for the list of write-ups. Match the page next to them.
 
 ## Write-ups: every page is one self-contained file
 

@@ -154,6 +154,31 @@ section {
   color: #666;
 }
 
+/* A project's write-ups, listed newest first on its index page. The write-ups
+   themselves carry their own styles. */
+.write-ups {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #ddd;
+}
+
+.write-ups li {
+  margin: 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.write-ups a {
+  font-size: 18px;
+  font-weight: bold;
+  text-underline-offset: 4px;
+}
+
+.write-ups p {
+  margin: 0.25rem 0 0;
+}
+
 /* Forms. Only the Howler support page has one, and these are the only rules in
    this file that are not shared by every page. */
 .field {
